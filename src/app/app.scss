@@ -14,3 +14,13 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.appmenu {
+    background-image: url('/assets/imgs/abt-2.jpg');
+}
+
+.btnClear {
+    background: transparent;
+    color: #f9f9f9;
+    font-weight: bold;
+}

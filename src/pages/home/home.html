@@ -1,18 +1,54 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+    <ion-title><img src="assets/imgs/DROID.png" width="100%" height="100%"></ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+<ion-content class="mainback">
+  <ion-list>
+    <button ion-item *ngFor="let post of posts" (click)="openPost(post.link)" style="margin-bottom: 5px;">
+      
+      <div>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12 class="titlen">
+              {{post.title}}
+            </ion-col>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+            <ion-col col-12>
+              {{post.excerpt}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
+      </div>
+      
+    </button>
+
+ 
+
+   
+  </ion-list>
 </ion-content>
+
+<style>
+  .titlen {
+    
+    text-align: justify;
+    text-justify: auto;
+    text-decoration: underline;
+    font-style: italic; 
+    font-weight: bold;
+  }
+
+  
+ </style>
